@@ -3,17 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matemática Por Conteúdo - Vol. 1</title>
+    <title>Matemática Por Conteúdo (Oficial)</title>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        /* Ajustes finos para ficar perfeito */
-        body { padding-top: 40px; }
-        header { text-align: center; padding-bottom: 40px; border-bottom: 1px solid #333; margin-bottom: 40px; }
-        .hero-price { font-size: 3em; font-weight: bold; color: #10b981; margin: 0; }
-        .author { color: #888; font-style: italic; }
-        .box-destaque { border: 1px solid #333; padding: 20px; border-radius: 10px; background-color: #191e24; }
-        .skill-list li { margin-bottom: 15px; }
-        strong { color: #fff; } /* Destaca os títulos das habilidades */
+        /* === BACKGROUND MATEMÁTICO (Papel Milimetrado Dark) === */
+        body {
+            /* Cria um grid sutil de 40px x 40px */
+            background-color: #11191f;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            padding-top: 40px;
+        }
+
+        /* Ajustes de Tipografia e Espaçamento */
+        header { 
+            text-align: center; 
+            padding-bottom: 40px; 
+            border-bottom: 1px solid #374151; 
+            margin-bottom: 50px; 
+        }
+        
+        /* Título com fonte levemente serifada (estilo LaTeX/Livro) */
+        h1 { 
+            font-family: 'Georgia', serif; 
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+
+        .author { color: #9ca3af; font-size: 0.9em; letter-spacing: 1px; text-transform: uppercase; }
+
+        /* Caixa de Destaque (Preço) */
+        .box-destaque { 
+            border: 1px solid #374151; 
+            padding: 30px; 
+            border-radius: 8px; 
+            background-color: #1f2937; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .hero-price { 
+            font-size: 3.5em; 
+            font-weight: 800; 
+            color: #34d399; /* Verde "Matrix" sutil */
+            margin: 10px 0; 
+            font-family: 'Courier New', monospace; /* Fonte monoespaçada para o número */
+        }
+
+        /* Lista de Habilidades com Ícones */
+        .skill-list { list-style: none; padding: 0; }
+        .skill-list li { 
+            margin-bottom: 25px; 
+            display: flex; 
+            align-items: start; 
+        }
+        .icon-box {
+            background: #374151;
+            color: #fff;
+            min-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.1em;
+        }
+        
+        strong { color: #e5e7eb; } 
+        p { color: #9ca3af; }
     </style>
 </head>
 <body>
@@ -22,41 +84,69 @@
         <header>
             <hgroup>
                 <h1>Matemática Por Conteúdo</h1>
-                <h2>Um novo modo de pensar matemática.</h2>
+                <h2>Aprenda a linguagem do universo, não apenas as regras.</h2>
             </hgroup>
-            <p class="author">Por Paxley (Estudante de Licenciatura em Matemática - UFRJ)</p>
+            <p class="author">Gabriel "Paxley" &bull; Licenciatura em Matemática UFRJ</p>
         </header>
 
         <div class="grid">
             <div>
-                <h3>Pensar > Calcular</h3>
-                <p>O foco deste projeto é popularizar o "pensar como um matemático" em vez de apenas "executar como uma calculadora".</p>
-                <p>Cada questão é um "disfarce": uma história caótica, um labirinto de informações ou uma fórmula assustadora. O objetivo não é apenas resolver a equação, mas desenvolver as <strong>3 habilidades-chave</strong>:</p>
+                <h3><i class="fa-solid fa-infinity"></i> O Método</h3>
+                <p>Esqueça a decoreba. Este material foi desenhado para desenvolver as <strong>3 competências fundamentais</strong> do raciocínio matemático:</p>
                 
                 <ul class="skill-list">
-                    <li>🛠 <strong>Modelagem:</strong><br>Traduzir o caos de um problema real em uma fórmula simples.</li>
-                    <li>👁 <strong>Visão Analítica:</strong><br>Encontrar o "atalho" e ver através do disfarce da questão.</li>
-                    <li>🧩 <strong>Organização:</strong><br>Navegar o labirinto de informações sem se perder.</li>
+                    <li>
+                        <div class="icon-box"><i class="fa-solid fa-puzzle-piece"></i></div>
+                        <div>
+                            <strong>Modelagem</strong><br>
+                            <small>A arte de traduzir o caos do mundo real em uma equação elegante.</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-box"><i class="fa-solid fa-microscope"></i></div>
+                        <div>
+                            <strong>Visão Analítica</strong><br>
+                            <small>Enxergar através do "disfarce" da questão e identificar o padrão oculto.</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                        <div>
+                            <strong>Estruturação</strong><br>
+                            <small>Organizar dados complexos com frieza lógica e método.</small>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
             <div>
                 <article class="box-destaque">
-                    <header><strong>Volume 1: Equações do 1º Grau</strong></header>
-                    <p style="text-align: center;">40 questões com gabarito + resoluções para treinar sua lógica.</p>
+                    <header style="border:none; padding:0; margin:0; text-align:center;">
+                        <i class="fa-solid fa-book-open" style="font-size: 2em; margin-bottom: 15px; color: #34d399;"></i>
+                        <br><strong>Volume 1: Equações do 1º Grau</strong>
+                    </header>
+                    
+                    <hr style="margin: 20px 0; border-color: #374151;">
+                    
+                    <p style="text-align: center; font-size: 0.9em;">
+                        40 problemas selecionados.<br>Do nível básico ao nível ITA.
+                    </p>
+                    
                     <p style="text-align: center;" class="hero-price">R$ 5,00</p>
                     
-                    <a href="#" role="button" class="contrast" style="width: 100%; font-size: 1.2em;">
-                        Quero Aprender a Pensar 🧠
+                    <a href="#" role="button" class="contrast" style="width: 100%; font-weight: bold;">
+                        <i class="fa-solid fa-download"></i> Obter Cópia Digital
                     </a>
-                    <small style="display: block; text-align: center; margin-top: 10px; color: #666;">Entrega imediata (PDF)</small>
+                    
+                    <small style="display: block; text-align: center; margin-top: 15px; color: #6b7280; font-size: 0.8em;">
+                        <i class="fa-solid fa-lock"></i> Pagamento seguro via Stripe
+                    </small>
                 </article>
             </div>
         </div>
 
-        <footer style="text-align: center; margin-top: 80px; font-size: 0.8em; color: #666;">
-            <p>© 2025 Gabriel Santos Souza - Rio de Janeiro</p>
-            <p>Todos os direitos reservados.</p>
+        <footer style="text-align: center; margin-top: 80px; border-top: 1px solid #374151; padding-top: 20px;">
+            <p style="font-size: 0.8em;">&copy; 2025 Projeto Delta M. Rio de Janeiro.</p>
         </footer>
     </main>
 
