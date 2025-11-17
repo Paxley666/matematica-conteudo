@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* === BACKGROUND MATEMÁTICO (Papel Milimetrado Dark) === */
         body {
-            /* Cria um grid sutil de 40px x 40px */
             background-color: #11191f;
             background-image: 
                 linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
@@ -20,59 +18,39 @@
             padding-top: 40px;
         }
 
-        /* Ajustes de Tipografia e Espaçamento */
-        header { 
-            text-align: center; 
-            padding-bottom: 40px; 
-            border-bottom: 1px solid #374151; 
-            margin-bottom: 50px; 
-        }
-        
-        /* Título com fonte levemente serifada (estilo LaTeX/Livro) */
-        h1 { 
-            font-family: 'Georgia', serif; 
-            letter-spacing: -1px;
-            margin-bottom: 10px;
-        }
-
+        header { text-align: center; padding-bottom: 40px; border-bottom: 1px solid #374151; margin-bottom: 50px; }
+        h1 { font-family: 'Georgia', serif; letter-spacing: -1px; margin-bottom: 10px; }
         .author { color: #9ca3af; font-size: 0.9em; letter-spacing: 1px; text-transform: uppercase; }
-
-        /* Caixa de Destaque (Preço) */
+        
         .box-destaque { 
-            border: 1px solid #374151; 
-            padding: 30px; 
-            border-radius: 8px; 
-            background-color: #1f2937; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid #374151; padding: 30px; border-radius: 8px; 
+            background-color: #1f2937; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
         }
 
-        .hero-price { 
-            font-size: 3.5em; 
-            font-weight: 800; 
-            color: #34d399; /* Verde "Matrix" sutil */
-            margin: 10px 0; 
-            font-family: 'Courier New', monospace; /* Fonte monoespaçada para o número */
+        .hero-price { font-size: 3.5em; font-weight: 800; color: #34d399; margin: 10px 0; font-family: 'Courier New', monospace; }
+
+        .skill-list { list-style: none; padding: 0; text-align: left; }
+        .skill-list li { margin-bottom: 25px; display: flex; align-items: start; }
+        .icon-box { background: #374151; color: #fff; min-width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 1.1em; }
+        
+        /* Botão Pix */
+        .btn-pix {
+            background-color: #1f2937; border: 1px dashed #34d399; color: #34d399;
+            width: 100%; margin-bottom: 15px; font-size: 0.9em; transition: 0.3s;
+        }
+        .btn-pix:hover { background-color: #11191f; border-color: #10b981; color: #10b981; }
+        
+        /* Botão Download (Escondido no início) */
+        #area-download { display: none; margin-top: 20px; animation: fadeIn 1s; }
+        .btn-download {
+            background-color: #009ee3 !important; border-color: #009ee3 !important; color: #fff !important;
+            width: 100%; font-weight: bold; font-size: 1.1em;
         }
 
-        /* Lista de Habilidades com Ícones */
-        .skill-list { list-style: none; padding: 0; }
-        .skill-list li { 
-            margin-bottom: 25px; 
-            display: flex; 
-            align-items: start; 
-        }
-        .icon-box {
-            background: #374151;
-            color: #fff;
-            min-width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-size: 1.1em;
-        }
+        #copia-msg { display: none; color: #10b981; font-size: 0.8em; margin-bottom: 10px; }
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         
         strong { color: #e5e7eb; } 
         p { color: #9ca3af; }
@@ -93,53 +71,43 @@
             <div>
                 <h3><i class="fa-solid fa-infinity"></i> O Método</h3>
                 <p>Esqueça a decoreba. Este material foi desenhado para desenvolver as <strong>3 competências fundamentais</strong> do raciocínio matemático:</p>
-                
                 <ul class="skill-list">
-                    <li>
-                        <div class="icon-box"><i class="fa-solid fa-puzzle-piece"></i></div>
-                        <div>
-                            <strong>Modelagem</strong><br>
-                            <small>A arte de traduzir o caos do mundo real em uma equação elegante.</small>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon-box"><i class="fa-solid fa-microscope"></i></div>
-                        <div>
-                            <strong>Visão Analítica</strong><br>
-                            <small>Enxergar através do "disfarce" da questão e identificar o padrão oculto.</small>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
-                        <div>
-                            <strong>Estruturação</strong><br>
-                            <small>Organizar dados complexos com frieza lógica e método.</small>
-                        </div>
-                    </li>
+                    <li><div class="icon-box"><i class="fa-solid fa-puzzle-piece"></i></div><div><strong>Modelagem</strong><br><small>Traduzir o caos do mundo real em uma equação.</small></div></li>
+                    <li><div class="icon-box"><i class="fa-solid fa-microscope"></i></div><div><strong>Visão Analítica</strong><br><small>Ver através do "disfarce" da questão.</small></div></li>
+                    <li><div class="icon-box"><i class="fa-solid fa-layer-group"></i></div><div><strong>Estruturação</strong><br><small>Organizar dados com frieza lógica.</small></div></li>
                 </ul>
             </div>
 
             <div>
                 <article class="box-destaque">
-                    <header style="border:none; padding:0; margin:0; text-align:center;">
-                        <i class="fa-solid fa-book-open" style="font-size: 2em; margin-bottom: 15px; color: #34d399;"></i>
+                    <header style="border:none; padding:0; margin:0;">
+                        <i class="fa-brands fa-pix" style="font-size: 2em; margin-bottom: 15px; color: #34d399;"></i>
                         <br><strong>Volume 1: Equações do 1º Grau</strong>
                     </header>
                     
                     <hr style="margin: 20px 0; border-color: #374151;">
+                    <p class="hero-price">R$ 5,00</p>
+
+                    <div style="font-size: 0.9em; margin-bottom: 10px; color: #fff;">Toque para copiar o Pix e liberar o download:</div>
                     
-                    <p style="text-align: center; font-size: 0.9em;">
-                        40 problemas selecionados.<br>Do nível básico ao nível ITA.
-                    </p>
+                    <button onclick="liberarDownload()" class="btn-pix" id="btn-copiar">
+                        <i class="fa-regular fa-copy"></i> Copiar Código Pix
+                    </button>
                     
-                    <p style="text-align: center;" class="hero-price">R$ 5,00</p>
-                    
-                    <a href="https://buy.stripe.com/aFa7sL057bpT0Y902dg3600" role="button" class="contrast" style="width: 100%; font-weight: bold;">
-                        <i class="fa-solid fa-download"></i> Obter Cópia Digital
-                    </a>
-                    
-                    <small style="display: block; text-align: center; margin-top: 15px; color: #6b7280; font-size: 0.8em;">
-                        <i class="fa-solid fa-lock"></i> Pagamento seguro via Stripe
+                    <div id="copia-msg"><i class="fa-solid fa-check"></i> Código copiado! Pague no seu banco.</div>
+
+                    <div id="area-download">
+                        <div style="font-size: 0.8em; color: #10b981; margin-bottom: 10px;">Pagamento identificado (Simulação).<br>Obrigado pela honestidade!</div>
+                        
+                        <a href="https://drive.google.com/drive/folders/1G39mkI0DNocszDk25ytT-dgmolPQhABc?usp=sharing" 
+                           target="_blank" 
+                           role="button" class="btn-download">
+                            <i class="fa-solid fa-cloud-arrow-down"></i> Baixar PDF Agora
+                        </a>
+                    </div>
+
+                    <small style="display: block; margin-top: 15px; color: #6b7280; font-size: 0.8em;">
+                        Acesso imediato.
                     </small>
                 </article>
             </div>
@@ -149,6 +117,32 @@
             <p style="font-size: 0.8em;">&copy; 2025 Projeto Delta M. Rio de Janeiro.</p>
         </footer>
     </main>
+
+    <script>
+        function liberarDownload() {
+            // Código Pix Gigante
+            const codigoPix = "00020126360014br.gov.bcb.pix0114+552197023725152040000530398654045.005802BR5920GABRIEL SANTOS SOUZA6009Sao Paulo62290525REC691AB92D4C2AB72305387663049008";
+            
+            // 1. Copia para a área de transferência
+            navigator.clipboard.writeText(codigoPix).then(() => {
+                const btn = document.getElementById("btn-copiar");
+                const msg = document.getElementById("copia-msg");
+                const downloadArea = document.getElementById("area-download");
+
+                // 2. Feedback visual
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> Copiado!';
+                btn.style.borderColor = "#10b981";
+                msg.style.display = "block";
+
+                // 3. Aguarda 3 segundos e libera o download
+                setTimeout(() => {
+                    downloadArea.style.display = "block"; // Mostra o botão azul
+                    btn.style.display = "none"; // Esconde o botão do Pix pra limpar a tela
+                    msg.style.display = "none";
+                }, 3000);
+            });
+        }
+    </script>
 
 </body>
 </html>
