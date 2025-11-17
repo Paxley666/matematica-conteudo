@@ -4,42 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matemática Por Conteúdo - Vol. 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #f4f4f9; color: #333; text-align: center; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; }
-        .price { font-size: 2em; color: #27ae60; font-weight: bold; }
-        .levels { text-align: left; margin: 20px 0; }
-        .cta-button {
-            background-color: #3498db; color: white; padding: 15px 30px; 
-            text-decoration: none; font-size: 1.2em; border-radius: 5px; 
-            display: inline-block; margin-top: 20px; cursor: pointer;
-        }
-        .cta-button:hover { background-color: #2980b9; }
+        /* Ajustes finos para ficar perfeito */
+        body { padding-top: 40px; }
+        header { text-align: center; padding-bottom: 40px; border-bottom: 1px solid #333; margin-bottom: 40px; }
+        .hero-price { font-size: 3em; font-weight: bold; color: #10b981; margin: 0; }
+        .author { color: #888; font-style: italic; }
+        .box-destaque { border: 1px solid #333; padding: 20px; border-radius: 10px; background-color: #191e24; }
+        .skill-list li { margin-bottom: 15px; }
+        strong { color: #fff; } /* Destaca os títulos das habilidades */
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Matemática Por Conteúdo: Vol 1</h1>
-        <p>Do iFood às Equações do ITA. Aprenda a pensar, não só a calcular.</p>
-        
-        <p>Criado por <strong>Gabriel "Paxley"</strong> (Licenciatura em Matemática - UFRJ)</p>
+    <main class="container">
+        <header>
+            <hgroup>
+                <h1>Matemática Por Conteúdo</h1>
+                <h2>Um novo modo de pensar matemática.</h2>
+            </hgroup>
+            <p class="author">Por Gabriel "Paxley" (Licenciatura em Matemática - UFRJ)</p>
+        </header>
 
-        <div class="levels">
-            <h3>O que você vai encontrar:</h3>
-            <ul>
-                <li>✅ <strong>Nível Fácil:</strong> Reduza a ansiedade com memes e cotidiano.</li>
-                <li>🧠 <strong>Nível Médio:</strong> Estruture seu raciocínio lógico.</li>
-                <li>🔥 <strong>Nível Difícil/ITA:</strong> Teste sua frieza e lógica pura.</li>
-            </ul>
+        <div class="grid">
+            <div>
+                <h3>Pensar > Calcular</h3>
+                <p>O foco deste projeto é popularizar o "pensar como um matemático" em vez de apenas "executar como uma calculadora".</p>
+                <p>Cada questão é um "disfarce": uma história caótica, um labirinto de informações ou uma fórmula assustadora. O objetivo não é apenas resolver a equação, mas desenvolver as <strong>3 habilidades-chave</strong>:</p>
+                
+                <ul class="skill-list">
+                    <li>🛠 <strong>Modelagem:</strong><br>Traduzir o caos de um problema real em uma fórmula simples.</li>
+                    <li>👁 <strong>Visão Analítica:</strong><br>Encontrar o "atalho" e ver através do disfarce da questão.</li>
+                    <li>🧩 <strong>Organização:</strong><br>Navegar o labirinto de informações sem se perder.</li>
+                </ul>
+            </div>
+
+            <div>
+                <article class="box-destaque">
+                    <header><strong>Volume 1: Equações do 1º Grau</strong></header>
+                    <p style="text-align: center;">40 questões com gabarito + resoluções para treinar sua lógica.</p>
+                    <p style="text-align: center;" class="hero-price">R$ 5,00</p>
+                    
+                    <a href="#" role="button" class="contrast" style="width: 100%; font-size: 1.2em;">
+                        Quero Aprender a Pensar 🧠
+                    </a>
+                    <small style="display: block; text-align: center; margin-top: 10px; color: #666;">Entrega imediata (PDF)</small>
+                </article>
+            </div>
         </div>
 
-        <p class="price">Apenas R$ 5,00</p>
-        <p><small>Ajude um estudante independente e garanta material de qualidade.</small></p>
-
-        <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta-button">Quero a minha cópia</a>
-    </div>
+        <footer style="text-align: center; margin-top: 80px; font-size: 0.8em; color: #666;">
+            <p>© 2025 Gabriel Santos Souza - Rio de Janeiro</p>
+            <p>Todos os direitos reservados.</p>
+        </footer>
+    </main>
 
 </body>
 </html>
