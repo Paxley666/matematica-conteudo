@@ -94,10 +94,12 @@
                         <i class="fa-regular fa-copy"></i> Copiar Código Pix
                     </button>
                     
-                    <div id="copia-msg"><i class="fa-solid fa-check"></i> Código copiado! Pague no seu banco.</div>
+                    <div id="copia-msg"><i class="fa-solid fa-check"></i> Código copiado! Cole no app do banco.</div>
 
                     <div id="area-download">
-                        <div style="font-size: 0.8em; color: #10b981; margin-bottom: 10px;">Pagamento identificado (Simulação).<br>Obrigado pela honestidade!</div>
+                        <div style="font-size: 0.8em; color: #10b981; margin-bottom: 10px;">
+                            <i class="fa-solid fa-lock-open"></i> Pagamento opcional.<br>Obrigado pelo apoio!
+                        </div>
                         
                         <a href="https://drive.google.com/drive/folders/1G39mkI0DNocszDk25ytT-dgmolPQhABc?usp=sharing" 
                            target="_blank" 
@@ -134,12 +136,12 @@
                 btn.style.borderColor = "#10b981";
                 msg.style.display = "block";
 
-                // 3. Aguarda 3 segundos e libera o download
+                // 3. Aguarda 4 segundos (tempo de abrir o banco) e libera
                 setTimeout(() => {
                     downloadArea.style.display = "block"; // Mostra o botão azul
-                    btn.style.display = "none"; // Esconde o botão do Pix pra limpar a tela
+                    btn.style.display = "none"; // Esconde o botão do Pix
                     msg.style.display = "none";
-                }, 3000);
+                }, 4000);
             });
         }
     </script>
